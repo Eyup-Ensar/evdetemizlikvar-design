@@ -4,17 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/date.css">
     <link rel="stylesheet" href="css/firstPart.css">
     <link rel="stylesheet" href="css/secondPart.css">
     <link rel="stylesheet" href="css/footer.css">
+
+    <script src="js/other/dropMenu.js"></script>
+
 </head>
 <body>
     <header>
         <img src="images/logo.png" class="logo">
-        <img src="images/header.png" alt="" srcset="">
-        <div class="iconMenu">☰</div>
+        <div class="head">
+            <div>
+                <div class="ball">1</div>
+                <div class="rod"></div>
+                <div class="ball">2</div>
+                <div class="rod"></div>
+                <div class="ball">3</div>
+            </div>
+            <div>
+                <div>Siparişini Oluştur</div>
+                <div>Giriş Yap</div>
+                <div>Ödeme Yap</div>
+            </div>
+        </div>
+        <div class="dropMenu">
+            <a onclick="closeMenu()">&times;</a>
+            <div>
+                <a>ANASAYFA</a>
+                <a>NEDEN EVDE TEMİZLİK VAR?</a>
+                <a>NELER DAHİL?</a>
+                <a>HAKKIMIZDA</a>
+                <a>SIKÇA SORULAN SORULAR</a>
+            </div>
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openMenu()">&#9776;</span>
     </header>
     <section>
         <div class="part1">
@@ -25,40 +53,43 @@
                 <tr>
                     <td>İlçe</td><td>Semt</td>
                 </tr>
-                <tr>    
-                    <td><select><option>Kadiköy</option></select></td>
-                    <td><select><option>Kadiköy</option></select></td>
+                <tr>
+                    <td><select><option value="control">Lütfen Seçin</option><option>Kadiköy</option><option>Üsküdar</option><option>Küçükçekmece</option></select></td>
+                    <td><select><option value="control">Lütfen Seçin</option><option>Feneryolu</option><option>Aksaray</option><option>Beylerbeyi</option><option>Bostancı</option></select></td>
                 </tr>
                 <tr>
                     <td>Tarih</td><td>Saat</td>
                 </tr>
                 <tr>
-                    <td><select><option>12.05.2021</option></select></td>
-                    <td><select class="s"><option>12:30</option></select></td>
+                    <td><select><option value="control">Lütfen Seçin</option><option>12.05.2021</option><option>06.02.2021</option><option>09.27.2021</option></select></td>
+                    <td><select><option value="control">Lütfen Seçin</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option></select></td>
                 </tr>
             </table>
             <div class="clm2">
+                <h3>Eviniz Ne Büyüklükte?</h3>
                 <div>
-                    <input type="button" value="">
-                    <input type="button" value="2+1">
-                    <input type="button" value="">
-                    <input type="button" value="Evim Daha Büyük">
+                    <button type="button">1+0</button>
+                    <button type="button">1+1</button>
+                    <button type="button">2+1</button>
+                    <button type="button">3+1</button>
+                    <button type="button">4+1</button>
+                    <button type="button">Evim Daha Büyük</button>
                 </div>
             </div>
             <div class="clm3">
                 <h3>Eviniz kaç katlı?</h3>
                 <div>
-                    <input type="button" value="Tek Katlı">
-                    <input type="button" value="Dubleks">
-                    <input type="button" value="Tripleks">
+                    <button type="button">Tek Katlı</button>
+                    <button type="button">Dublek</button>
+                    <button type="button">Tripleks</button>
                 </div>
             </div>
             <div class="clm4">
                 <h3>Temizliğe hangi sıklıkla gelelim?</h3>
                 <div>
-                    <input type="button" value="Haftada Bir">
-                    <input type="button" value="İki Haftada Bir">
-                    <input type="button" value="Tek Sefer">
+                    <button type="button">Haftada Bir</button>
+                    <button type="button">İki Haftada Bir</button>
+                    <button type="button">Tek Sefer</button>
                 </div>
             </div>
             <div class="clm5">
@@ -77,12 +108,14 @@
                 <h3>Evcil hayvanınız var mı?</h3>
                 <div>
                     <button type="button">Hayır</button>
-                    <button type="button">Köpek</button>
-                    <button type="button">Kedi</button>
-                    <button type="button">Kuş</button>
-                    <button type="button">Balık</button>
-                    <button type="button">Diğer</button>
-                    <input type="text" >
+                    <button type="button" class="animalsctrl">Köpek</button>
+                    <button type="button" class="animalsctrl">Kedi</button>
+                    <button type="button" class="animalsctrl">Kuş</button>
+                    <button type="button" class="animalsctrl">Balık</button>
+                    <button type="button" class="animalsctrl">Diğer</button>
+                    <div>
+
+                    </div>
                 </div>
             </div>
             <div class="clm7">
@@ -96,7 +129,8 @@
                 <div>
                     <button type="button">Evde Olacağım</button>
                     <button type="button">Anahtarı Bırakacağım</button>
-                    <input type="text" placeholder="Lütfen anahtarı bırakacağınız yeri yazınız...">
+                    <div>
+                    </div>
                 </div>
                 <hr>
                 <h3>Temizlik personeline notunuz var mı?</h3>
@@ -107,9 +141,8 @@
             <div class="clm8">
                 <button type="button">Devam Et</button>
             </div>
-        </div>  
-
-        <table class="date">
+        </div>
+        <!-- <table class="date">
             <tr><th><</th><td colspan="5">Eylül 2020</td><th>></th></tr>
             <tr class="tr-date"><td>S</td><td>M</td><td>T</td><td>W</td><td>T</td><td>F</td><td>S</td></tr>
             <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
@@ -117,38 +150,29 @@
             <tr><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td class="x">20</td><td>21</td></tr>
             <tr><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr>
             <tr><td>29</td><td>30</td></tr>
-        </table>
+        </table> -->
+
 
         <div class="part2">
             <div class="clm1">
-                <div>
-                    <h2>Sipariş Özeti</h2>
-                    <p>Kadiköy, Feneryolu</p>
-                    <p>12.05.2021 - 12.30</p>
-                </div>
-                <hr>
-                <div>
-                    <div><p>Haftada Bir</p><p>232 TL</p></div>
-                    <div><p>Buzdolabı Temizliği</p><p>5 TL</p></div>
-                    <div><p>Fırın Temizliği</p><p>5 TL</p></div>
-                    <div><p>Temizlik Malzemeleri</p><p>40 TL</p></div>
-                    <hr>
-                    <div><p>TOPLAM</p><p>282 TL</p></div>
-                    <div><input type="button" value="Devam Et"></div>
-                </div>
+
             </div>
             <div class="clm2">
                 <h2>Sıkça Sorulan Sorular</h2>
                 <hr>
-                <div><p>Temizliğe neler dahil?</p><img class="img" src="images/arrowDown.png"></div>
-                <div><p>Temizliğe neler dahil?</p><img class="img" src="images/arrowUp.png"></div>
-                <p>Bilgiye ulaşmanın hem çok kolay hem de çok zor olduğu şu son zamanlarda, insanların bilgi ihtiyacını karşılamak için ille de basılı kaynaklara yönelmelerini beklemek oldukça yanlış bir düşünce biçimidir.</p>
+                <button class="accordion"><p>Temizliğe neler dahil?</p><i class="fas fa-angle-down"></i></button>
+                <div><p>Bilgiye ulaşmanın hem çok kolay hem de çok zor olduğu şu son zamanlarda, insanların bilgi ihtiyacını karşılamak için ille de basılı kaynaklara yönelmelerini beklemek oldukça yanlış bir düşünce biçimidir.</p></div>
+                <button class="accordion"><p>Temizliğe neler dahil?</p><i class="fas fa-angle-down"></i></button>
+                <div><p>Bilgiye ulaşmanın hem çok kolay hem de çok zor olduğu şu son zamanlarda, insanların bilgi ihtiyacını karşılamak için ille de basılı kaynaklara yönelmelerini beklemek oldukça yanlış bir düşünce biçimidir.</p></div>
                 <hr>
-                <div><p>Bilgiye ulaşmanın hem çok kolay hem de çok zor olduğu mu?</p><img src="images/arrowDown.png"></div>
+                <button class="accordion"><p>Bilgiye ulaşmanın hem çok kolay hem de çok zor olduğu mu?</p><i class="fas fa-angle-down"></i></button>
+                <div><p>En eski Çin hiyeroglifleri MÖ 1766 yılına aittir. MS 200'lerde ise son şeklini bulmuştur. Bundan sonra bazı mahallî değişikliklere uğramıştır. </p></div>
                 <hr>
-                <div><p>Bilgiye ulaşmanın hem çok kolay hem de çok zor olduğu mu?</p><img src="images/arrowDown.png"></div>
+                <button class="accordion"><p>Bilgiye ulaşmanın hem çok kolay hem de çok zor olduğu mu?</p><i class="fas fa-angle-down"></i></button>
+                <div><p>En eski Çin hiyeroglifleri MÖ 1766 yılına aittir. MS 200'lerde ise son şeklini bulmuştur. Bundan sonra bazı mahallî değişikliklere uğramıştır. </p></div>
                 <hr>
-                <div><p>Bilgiye ulaşmanın hem çok kolay hem de çok zor olduğu mu?</p><img src="images/arrowDown.png"></div>
+                <button class="accordion"><p>Bilgiye ulaşmanın hem çok kolay hem de çok zor olduğu mu?</p><i class="fas fa-angle-down"></i></button>
+                <div><p>En eski Çin hiyeroglifleri MÖ 1766 yılına aittir. MS 200'lerde ise son şeklini bulmuştur. Bundan sonra bazı mahallî değişikliklere uğramıştır. </p></div>
             </div>
         </div>
     </section>
@@ -175,5 +199,11 @@
             <p>Hygienic Temizlik Gıda Turizm <br> Hizm. San. ve Tic. Ltd.Şti</p>
         </div>
     </footer>
+
+
+    <script src="js/other/accordion.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/UI.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

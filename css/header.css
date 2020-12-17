@@ -4,7 +4,7 @@ body{
 }
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     box-shadow: 0px 0px 20px#d1d1d1;
     height: 140px;
@@ -14,10 +14,96 @@ header{
     height: 110px;
     cursor: pointer;
  }
-header img:nth-child(2){
-    margin-right: 110px;
+
+/* head */
+header>.head{
+    width: 700px;
+    font-weight: bold;
+    margin-right: 80px;
 }
-.iconMenu{
-    font-size: 35px;
+
+/* Div 1 */
+header>.head>div:first-child{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 45px;
+}
+header>.head>div:first-child>.ball{
+    width: 34px;
+    line-height: 34px;
+    border: 3px solid  rgb(255, 217, 0);
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0.6;
+}
+header>.head>div:first-child>.ball:first-child{
+    background-color: rgb(255, 217, 0);
+    opacity: 1 !important;
+}
+header>.head>div:first-child>.rod{
+    width: 240px;
+    height: 3px;
+    background-color: rgb(255, 217, 0);
+    opacity: 0.6;
+}
+header>.head>div:first-child>.rod:first-child{
+    opacity: 1 !important;
+}
+
+/* Div 2 */
+header>.head>div:last-child{
+    width: 700px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+}
+header>.head>div:last-child>div:nth-child(2){
+    margin-right: 20px;
+    opacity: 0.6;
+}
+header>.head>div:last-child>div:last-child{
+    margin-right: 35px;
+    opacity: 0.6;
+}
+
+/* Drop Menu */
+header>.dropMenu {
+    width: 100%;
+    height: 1250px;
+    display: none;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+header>.dropMenu>div {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    width: 355px;
+}
+header>.dropMenu>div>a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #474747;
+    display: block;
+    cursor: pointer;
+}
+header>.dropMenu>div>a:hover{
+    color: rgb(255, 217, 0);
+}
+header>.dropMenu>a {
+    position: absolute;
+    top: 65%;
+    margin-left: 85%;
+    font-size: 90px;
     cursor: pointer;
 }

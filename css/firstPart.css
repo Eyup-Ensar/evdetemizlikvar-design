@@ -5,15 +5,17 @@
     margin-right: 60px;
     font-weight: bold;
 }
-.part1>[class*="clm"] button,input[type="button"]{
+.part1>[class*="clm"] button{
     margin-top: 20px;
     box-shadow: 0px 0px 20px #e7e7e7;
+    width: 170px;
     height: 60px;
     border: none;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
+    outline: none;
 }
-.part1>[class*="clm"] input[type="text"]{
+.part1>[class*="clm"] input[type=text]{
     width: 93%;
     background-color: rgb(230, 230, 230);
     border: none;
@@ -48,18 +50,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 40px;
-    margin-left: 30px;
 }
-.part1>.clm2 input[type="button"]:nth-of-type(2n){
-    width: 170px;
-    background-color: rgb(255, 217, 0);
-}
-.part1>.clm2 input[type="button"]{
-    width: 350px;
-}
-.part1>.clm2 input[type="button"]:last-child{
-    background-color: white;
+.part1>.clm2>h3{
+    margin: 0px;
+    margin-left: 10px;
 }
 
 /* First Part Column 3 */
@@ -70,14 +64,6 @@
 .part1>.clm3 h3{
     margin:0;
 }
-.part1>.clm3 input[type="button"]{
-    width: 170px;
-    background-color: rgb(255, 255, 255);
-}
-.part1>.clm3 input[type="button"]:first-child{
-    width: 170px;
-    background-color: rgb(255, 217, 0);
-}
 
 /* First Part Column 4 */
 .part1>.clm4 div{
@@ -86,14 +72,6 @@
 }
 .part1>.clm4 h3{
     margin:0;
-}
-.part1>.clm4 input[type="button"]{
-    width: 170px;
-    background-color: rgb(255, 255, 255);
-}
-.part1>.clm4 input[type="button"]:first-child{
-    width: 170px;
-    background-color: rgb(255, 217, 0);
 }
 
 /* First Part Column 5 */
@@ -106,9 +84,6 @@
     height: 120px;
     margin: 8px;
 }
-.part1>.clm5>div>:first-child,.part1>.clm5>div>:nth-child(4){
-    background-color: rgb(255, 217, 0);
-}
 
 /* First Part Column 6 */
 .part1>.clm6>h3{
@@ -119,8 +94,8 @@
     width: 169px;
     margin: 8px;
 }
-.part1>.clm6>div>button:last-of-type{
-    background-color: rgb(255, 217, 0);
+.part1>.clm6 .animals{
+    background-color:  rgb(255, 217, 0);
 }
 
 /* First Part Column 7 */
@@ -139,13 +114,6 @@
     width: 265px;
     margin: 8px;
 }
-.part1>.clm7>div:first-of-type>button:first-of-type{
-    background-color: rgb(255, 217, 0);
-}
-.part1>.clm7>div:nth-of-type(2)>button:nth-of-type(2){
-    background-color: rgb(255, 217, 0);
-}
-
 .part1>.clm7 input[type="text"]{
     margin-left: 8px;
 }
@@ -158,6 +126,9 @@
     padding-left: 20px;
     padding-top: 20px;
     margin-left: 8px;
+}
+.part1>.clm7 .key{
+    background-color:  rgb(255, 217, 0);
 }
 
 /* First Part Column 8 */
