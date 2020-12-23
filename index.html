@@ -53,21 +53,21 @@
                 <tr>
                     <td>İlçe</td><td>Semt</td>
                 </tr>
-                <tr>
-                    <td><select><option value="control">Lütfen Seçin</option><option>Kadiköy</option><option>Üsküdar</option><option>Küçükçekmece</option></select></td>
-                    <td><select><option value="control">Lütfen Seçin</option><option>Feneryolu</option><option>Aksaray</option><option>Beylerbeyi</option><option>Bostancı</option></select></td>
+                <tr class="selectAddress">
+                    <td><select class="selectIlce"><option value="">Lütfen Seçin</option><option>Kadiköy</option><option>Üsküdar</option><option>Küçükçekmece</option></select></td>
+                    <td><select class="selectSemt"><option value="">Lütfen Seçin</option><option>Feneryolu</option><option>Aksaray</option><option>Beylerbeyi</option><option>Bostancı</option></select></td>
                 </tr>
                 <tr>
                     <td>Tarih</td><td>Saat</td>
                 </tr>
-                <tr>
-                    <td><select><option value="control">Lütfen Seçin</option><option>12.05.2021</option><option>06.02.2021</option><option>09.27.2021</option></select></td>
-                    <td><select><option value="control">Lütfen Seçin</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option></select></td>
+                <tr class="selectDate">
+                    <td><select class="selectTarih"><option value="">Lütfen Seçin</option><option>12.05.2021</option><option>06.02.2021</option><option>09.27.2021</option></select></td>
+                    <td><select class="selectSaat"><option value="">Lütfen Seçin</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option></select></td>
                 </tr>
             </table>
             <div class="clm2">
                 <h3>Eviniz Ne Büyüklükte?</h3>
-                <div>
+                <div class="howBigHome">
                     <button type="button">1+0</button>
                     <button type="button">1+1</button>
                     <button type="button">2+1</button>
@@ -78,23 +78,23 @@
             </div>
             <div class="clm3">
                 <h3>Eviniz kaç katlı?</h3>
-                <div>
-                    <button type="button">Tek Katlı</button>
-                    <button type="button">Dublek</button>
-                    <button type="button">Tripleks</button>
+                <div class="howManyFloors">
+                    <button type="button" class="oneFloor">Tek Katlı</button>
+                    <button type="button" class="duplex">Dubleks</button>
+                    <button type="button" class="triplex">Tripleks</button>
                 </div>
             </div>
             <div class="clm4">
                 <h3>Temizliğe hangi sıklıkla gelelim?</h3>
-                <div>
-                    <button type="button">Haftada Bir</button>
-                    <button type="button">İki Haftada Bir</button>
-                    <button type="button">Tek Sefer</button>
+                <div class="howTimes">
+                    <button type="button" class="onceAweek">Haftada Bir</button>
+                    <button type="button" class="biweekly">İki Haftada Bir</button>
+                    <button type="button" class="oneTimes">Tek Sefer</button>
                 </div>
             </div>
             <div class="clm5">
                 <h3>Ek hizmetler</h3>
-                <div>
+                <div class="additionalServices">
                     <button type="button">Buzdolabı Temizliği <br> <h3>5TL</h3></button>
                     <button type="button">Dolap Temizliği <br> <h3>25TL</h3></button>
                     <button type="button">İç Cam Temizliği <br> <h3>25TL</h3></button>
@@ -107,12 +107,12 @@
             <div class="clm6">
                 <h3>Evcil hayvanınız var mı?</h3>
                 <div>
-                    <button type="button">Hayır</button>
-                    <button type="button" class="animalsctrl">Köpek</button>
-                    <button type="button" class="animalsctrl">Kedi</button>
-                    <button type="button" class="animalsctrl">Kuş</button>
-                    <button type="button" class="animalsctrl">Balık</button>
-                    <button type="button" class="animalsctrl">Diğer</button>
+                    <button type="button" class="removeAnimals">Hayır</button>
+                    <button type="button" class="dog">Köpek</button>
+                    <button type="button" class="cat">Kedi</button>
+                    <button type="button" class="bird">Kuş</button>
+                    <button type="button" class="fish">Balık</button>
+                    <button type="button" class="otherAnimals">Diğer</button>
                     <div>
 
                     </div>
@@ -120,15 +120,15 @@
             </div>
             <div class="clm7">
                 <h3>Temizlik malzemelerimizi yanımızda getirelim mi?</h3>
-                <div>
+                <div class="cleaningMaterial">
                     <button type="button">Evet - 40TL </button>
                     <button type="button">Hayır</button>
                 </div>
                 <hr>
                 <h3>Temizlik personeli evinize nasıl girebilir?</h3>
                 <div>
-                    <button type="button">Evde Olacağım</button>
-                    <button type="button">Anahtarı Bırakacağım</button>
+                    <button type="button" class="removeKey">Evde Olacağım</button>
+                    <button type="button" class="addKey">Anahtarı Bırakacağım</button>
                     <div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                 </div>
             </div>
             <div class="clm8">
-                <button type="button">Devam Et</button>
+                <button type="button" class="devamet">Devam Et</button>
             </div>
         </div>
         <!-- <table class="date">
@@ -151,7 +151,6 @@
             <tr><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr>
             <tr><td>29</td><td>30</td></tr>
         </table> -->
-
 
         <div class="part2">
             <div class="clm1">
@@ -202,7 +201,7 @@
 
 
     <script src="js/other/accordion.js"></script>
-    <script src="js/product.js"></script>
+    <script src="js/price.js"></script>
     <script src="js/UI.js"></script>
     <script src="js/app.js"></script>
 </body>

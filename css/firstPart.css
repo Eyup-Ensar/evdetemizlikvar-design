@@ -55,6 +55,9 @@
     margin: 0px;
     margin-left: 10px;
 }
+.part1>.clm2 .bigcontrol{
+    background-color:  rgb(255, 217, 0);
+}
 
 /* First Part Column 3 */
 .part1>.clm3 div{
@@ -64,6 +67,10 @@
 .part1>.clm3 h3{
     margin:0;
 }
+.part1>.clm3 .floorControl{
+    background-color:  rgb(255, 217, 0);
+
+}
 
 /* First Part Column 4 */
 .part1>.clm4 div{
@@ -72,6 +79,9 @@
 }
 .part1>.clm4 h3{
     margin:0;
+}
+.part1>.clm4 .howOften{
+    background-color:  rgb(255, 217, 0);
 }
 
 /* First Part Column 5 */
@@ -83,6 +93,9 @@
     width: 169px;
     height: 120px;
     margin: 8px;
+}
+.part1>.clm5 .addClass{
+    background-color:  rgb(255, 217, 0);
 }
 
 /* First Part Column 6 */

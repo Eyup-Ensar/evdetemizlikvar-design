@@ -30,6 +30,7 @@ hr{
 /* Second Part Column 1 */
 .part2>.clm1>table{
     width: 100%;
+    min-height: 200px;
 }
 .part2>.clm1>table td{
     padding: 7px 0px 7px 0px ;
@@ -38,6 +39,9 @@ hr{
     padding-bottom: 0;
 } 
 .part2>.clm1>table tr>td:nth-child(2){
+    text-align: right;
+}
+.part2>.clm1>table tr>.howBigControl{
     text-align: right;
 }
 .part2>.clm1>table h2{
@@ -54,8 +58,6 @@ hr{
     border: none;
     border-radius: 5px;
     background-color: rgb(255, 217, 0);
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 /* Second Part Column 2 (Accordion)*/
