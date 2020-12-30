@@ -1,5 +1,6 @@
 //Hesap Modülü
 const priceController = (function(){
+    // ücret bilgilerini taşıyacak data objesini oluştur
     const data = {
         homeSize: 0,
         homeFloor: 0,
@@ -14,13 +15,8 @@ const priceController = (function(){
             terracePrice: 0
         }
     }
+    // app modülünde oluşturulan butonlara tıklandığında gerekli ücret bilgilerini data objesine ata
     return{
-        devamet: function(){
-            var total;
-            var ap = data.additionelPrice;
-            total = data.homeSize + data.homeFloor + data.cleaningMaterial + ap.refrigeratorPrice + ap.closetPrice +
-            ap.interiorGlassPrice + ap.ovenPrice + ap.irons15Price + ap.irons30Price + ap.terracePrice;
-        },
         home10: function(){
             data.homeSize = 150;
         },
@@ -105,6 +101,7 @@ const priceController = (function(){
         getMaterialPrice: function(){
             return data.cleaningMaterial;
         },
+        // data objesindeki ücret bilgilerini topla ve app modülüne gönder
         getTotal: function(){
             var total;
             var ap = data.additionelPrice;

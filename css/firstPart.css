@@ -45,6 +45,22 @@
     margin-bottom: 15px;
 }
 
+.part1>.clm1 input[type="date"]{
+    width: 268px;
+    height: 48px;
+    border: none;
+    box-shadow: 1px 1px 5px #f3f3f3;
+    font-size: 15px;
+    text-indent: 3px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
 /* First Part Column 2 */
 .part1>.clm2>div{
     display: flex;

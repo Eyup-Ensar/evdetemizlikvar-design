@@ -1,8 +1,10 @@
  //Ana Modül
  const App = (function(priceCtrl,UIctrl) {
 
+    // ui'da ki select objesini app modülünde kullanılabilir hale getir
     const UIselectors = UIcontroller.getSelects();
 
+    // LoadEventListeners methodyla gerekli eventleri oluştur 
     const LoadEventListeners = function(){
 
         document.querySelector(UIselectors.selectaddress).addEventListener('change', selectAddress);
@@ -91,28 +93,22 @@
         
         document.querySelector(UIselectors.addkey).addEventListener('click', createkeyBtn); 
         
-        document.querySelector('.devamet').addEventListener('click', devamet);
-
         document.querySelector("*").addEventListener('click', createTotal);
-        
+
     }
 
     const createTotal = function(){
 
+        // price'dan döndürülen toplam değerini al ve ui modülüne gönder
         var total = priceCtrl.getTotal();
 
         UIctrl.addTotal(total);
 
-        return total;
+        UIctrl.addStart(total);
 
     }
 
-    const devamet = function(){
-
-        priceCtrl.devamet();
-
-    }
-
+    // ilçe ve semt değerlerini addSelectAddress fonksiyonu üzerinden ui modülüne gönder
     const selectAddress = function(){
 
         var ilce = document.querySelector(UIselectors.selectilce).value;
@@ -123,6 +119,7 @@
 
     }
 
+    // tarih ve saat değerlerini addSelectDate fonksiyonu üzerinden ui modülüne gönder
     const selectDate = function(){
 
         var tarih = document.querySelector(UIselectors.selecttarih).value;
@@ -133,6 +130,7 @@
 
     }
 
+    // Eviniz ne büyüklükte kısmında tüm butonlara tıklandığında çalışan printhowbig fonksiyonu üzerinden HomeSizePrice değerini ui modülüne gönder
     const printhowbig = function(){
         
         var HomeSizePrice = priceCtrl.printhowbig();
@@ -238,7 +236,7 @@
         UIctrl.addOneTimes();
 
     }
-
+    // Ek hizmetler kısmında butonları ayrı ayrı fonksiyonlarda çalıştır ve butona ait bilgileri ui modulune gonder
     const refrigeratorCleaning = function(){
 
         var a = document.querySelector(UIselectors.additionalservices).children[0];
@@ -452,6 +450,7 @@
 
     return{
 
+        // projeyi başlat
         init: function(){
 
             console.log('starting...');
