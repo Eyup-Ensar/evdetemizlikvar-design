@@ -15,9 +15,12 @@ const priceController = (function(){
             terracePrice: 0
         }
     }
-    // app modülünde oluşturulan butonlara tıklandığında gerekli ücret bilgilerini data objesine ata
+    // app modülünde oluşturulan butonlara tıklandığında ücret bilgilerini data objesine ata
     return{
+        httpPrice: function(price){
+        },
         home10: function(){
+            console.log(this.httpPrice());
             data.homeSize = 150;
         },
         home11: function(){
@@ -39,64 +42,64 @@ const priceController = (function(){
             return data.homeSize;
         },
         getOneFloor: function(){
-            data.homeFloor=0;
+            data.homeFloor = 0;
         },
         getDuplex: function(){
-            data.homeFloor=50;
+            data.homeFloor = 50;
         },
         getTriplex: function(){
-            data.homeFloor=100;
+            data.homeFloor = 100;
         },
         getFloors: function(){
             return data.homeFloor;
         },
         getRefrigeratorCleaning: function(){
-            return data.additionelPrice.refrigeratorPrice=5;
+            return data.additionelPrice.refrigeratorPrice = 5;
         },
         nullRefrigeratorCleaning: function(){
-            return data.additionelPrice.refrigeratorPrice=0;
+            return data.additionelPrice.refrigeratorPrice = 0;
         },
         getClosetCleaning: function(){
-            return data.additionelPrice.closetPrice=25;
+            return data.additionelPrice.closetPrice = 25;
         },
         nullClosetCleaning: function(){
-            return data.additionelPrice.closetPrice=0;
+            return data.additionelPrice.closetPrice = 0;
         },
         getInteriorGlass: function(){
-            return data.additionelPrice.interiorGlassPrice=25;
+            return data.additionelPrice.interiorGlassPrice = 25;
         },
         nullInteriorGlass: function(){
-            return data.additionelPrice.interiorGlassPrice=0;
+            return data.additionelPrice.interiorGlassPrice = 0;
         },
         getOvenCleaning: function(){
-            return data.additionelPrice.ovenPrice=5;
+            return data.additionelPrice.ovenPrice = 5;
         },
         nullOvenCleaning: function(){
-            return data.additionelPrice.ovenPrice=0;
+            return data.additionelPrice.ovenPrice = 0;
         },
         getIrons15: function(){
-            return data.additionelPrice.irons15Price=25;
+            return data.additionelPrice.irons15Price = 25;
         },
         nullIrons15: function(){
-            return data.additionelPrice.irons15Price=0;
+            return data.additionelPrice.irons15Price = 0;
         },
         getIrons30: function(){
-            return data.additionelPrice.irons30Price=25;
+            return data.additionelPrice.irons30Price = 25;
         },
         nullIrons30: function(){
-            return data.additionelPrice.irons30Price=0;
+            return data.additionelPrice.irons30Price = 0;
         },
         getTerraceCleaning: function(){
-            return data.additionelPrice.terracePrice=5;
+            return data.additionelPrice.terracePrice = 5;
         },
         nullTerraceCleaning: function(){
-            return data.additionelPrice.terracePrice=0;
+            return data.additionelPrice.terracePrice = 0;
         },
         getYesMaterial: function(){
-            data.cleaningMaterial=40;
+            data.cleaningMaterial = 40;
         },
         getNoMaterial: function(){
-            data.cleaningMaterial=0;
+            data.cleaningMaterial = 0;
         },
         getMaterialPrice: function(){
             return data.cleaningMaterial;

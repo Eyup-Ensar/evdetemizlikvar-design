@@ -1,10 +1,24 @@
  //Ana Modül
- const App = (function(priceCtrl,UIctrl) {
+ const App = (function(priceCtrl,UIctrl,httpctrl) {
+    
+    httpController.HTTP()
+    .then(response => {
+        UIctrl.addHttp(response);
+    })
+    .catch(error => {
+        console.log("reject", error);
+    }); 
 
-    // ui'da ki select objesini app modülünde kullanılabilir hale getir
+    httpController.HTTPSC()
+    .then(response => {
+        UIctrl.addHttpSC(response);
+    })
+    .catch(error => {
+        console.log("reject", error);
+    }); 
+
     const UIselectors = UIcontroller.getSelects();
 
-    // LoadEventListeners methodyla gerekli eventleri oluştur 
     const LoadEventListeners = function(){
 
         document.querySelector(UIselectors.selectaddress).addEventListener('change', selectAddress);
@@ -463,6 +477,6 @@
         
     }
 
-})(priceController, UIcontroller)
+})(priceController, UIcontroller, httpController)
 
 App.init();

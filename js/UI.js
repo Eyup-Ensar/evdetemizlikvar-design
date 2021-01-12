@@ -72,6 +72,39 @@ const UIcontroller = (function(){
                 </table> `;
             document.querySelector(select.part2).firstElementChild.innerHTML = html;
         },
+        addHttp: function(response){
+            //size
+            const howbig = document.querySelector(select.howbighome).children;
+            const size = response.size.options;
+            for(let i = 0;i < 4; i++){
+                howbig[i].innerHTML = size[i].name;
+            }
+            //times
+            const howtimes = document.querySelector(select.howtimes).children;
+            const requrring = response.productFrequencies; 
+            for(let i = 0;i < 3; i++){
+                howtimes[i].innerHTML = requrring[i].name;
+            }
+            //extra
+            const extra = document.querySelector(select.additionalservices);
+            for(let i = 0; i < 5; i++){
+                let h3 = extra.children[i].querySelector("h3");
+                let p = extra.children[i].querySelector("p");
+                let obj = response.extra.options[i];
+                h3.innerHTML = `${obj.price} TL`;
+                p.innerHTML = obj.name;
+            }
+        },
+        addHttpSC: function(response){
+            response.forEach(element => {
+                const select = document.querySelector(".selectIlce");
+                select.innerHTML+=`
+                <option value="${element.name}">
+                    ${element.name}
+                </option>
+                `;
+              });
+        },
         // toplam değeri 0'a eşit değilse footer kısmını yazdır.
         addTotal: function(total){
             const tfoot = document.querySelector(select.print).children[2];
@@ -144,6 +177,7 @@ const UIcontroller = (function(){
                 thead.removeChild(tr);
             }
         },
+        
         // ilçe ve semt değerleri girilmişse yazdır.
         addSelectAddress: function(ilce, semt){
             let virgul;
