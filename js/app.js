@@ -3,6 +3,8 @@
     
     httpController.HTTP()
     .then(response => {
+        size = response.size.options;
+        extra = response.extra.options;
         UIctrl.addHttp(response);
     })
     .catch(error => {
@@ -65,19 +67,19 @@
 
         document.querySelector(UIselectors.onetimes).addEventListener('click', oneTimesBtn);
 
-        document.querySelector(UIselectors.additionalservices).children[0].addEventListener('click', refrigeratorCleaning);
+        document.querySelector(UIselectors.additionalservices).children[0].addEventListener('click', interiorGlassCleaning);
 
-        document.querySelector(UIselectors.additionalservices).children[1].addEventListener('click', closetCleaning);
+        document.querySelector(UIselectors.additionalservices).children[1].addEventListener('click', irons30);
 
-        document.querySelector(UIselectors.additionalservices).children[2].addEventListener('click', interiorGlassCleaning);
+        document.querySelector(UIselectors.additionalservices).children[2].addEventListener('click', irons15);
 
-        document.querySelector(UIselectors.additionalservices).children[3].addEventListener('click', ovenCleaning);
+        document.querySelector(UIselectors.additionalservices).children[3].addEventListener('click', terraceCleaning);
         
-        document.querySelector(UIselectors.additionalservices).children[4].addEventListener('click', irons15);
+        document.querySelector(UIselectors.additionalservices).children[4].addEventListener('click', ovenCleaning);
 
-        document.querySelector(UIselectors.additionalservices).children[5].addEventListener('click', irons30);
+        document.querySelector(UIselectors.additionalservices).children[5].addEventListener('click', refrigeratorCleaning);
 
-        document.querySelector(UIselectors.additionalservices).children[6].addEventListener('click', terraceCleaning);
+        document.querySelector(UIselectors.additionalservices).children[6].addEventListener('click', closetCleaning);
 
         document.querySelector(UIselectors.removeanimals).addEventListener('click', animalsBtnRemove);
 
@@ -251,9 +253,109 @@
 
     }
     // Ek hizmetler kısmında butonları ayrı ayrı fonksiyonlarda çalıştır ve butona ait bilgileri ui modulune gonder
+    const interiorGlassCleaning = function(){
+        
+        var a = document.querySelector(UIselectors.additionalservices).children[0];
+
+        var price = null;
+
+        if(a.classList.contains('addClass')){
+
+        price = priceCtrl.nullInteriorGlass();
+
+        }else{ 
+
+        price = priceCtrl.getInteriorGlass();   
+
+        }
+
+        UIctrl.addInteriorGlass(price);
+        
+    }
+
+    const irons30 = function(){
+
+        var a = document.querySelector(UIselectors.additionalservices).children[1];
+
+        var price = null;
+
+        if(a.classList.contains('addClass')){
+
+        price = priceCtrl.nullIrons30();
+
+        }else{    
+
+        price = priceCtrl.getIrons30(); 
+
+        }
+
+        UIctrl.addIrons30(price);
+        
+    }
+
+    const irons15 = function(){
+
+        var a = document.querySelector(UIselectors.additionalservices).children[2];
+
+        var price = null;
+
+        if(a.classList.contains('addClass')){
+
+        price = priceCtrl.nullIrons15();
+
+        }else{    
+
+        price = priceCtrl.getIrons15(); 
+
+        }
+
+        UIctrl.addIrons15(price);
+        
+    }
+
+    const terraceCleaning = function(){
+
+        var a = document.querySelector(UIselectors.additionalservices).children[3];
+
+        var price = null;
+
+        if(a.classList.contains('addClass')){
+
+        price = priceCtrl.nullTerraceCleaning();
+
+        }else{    
+
+        price = priceCtrl.getTerraceCleaning();
+
+        }
+
+        UIctrl.addTerraceCleaning(price);
+        
+    }
+
+    const ovenCleaning = function(){
+
+        var a = document.querySelector(UIselectors.additionalservices).children[4];
+
+        var price = null;
+
+        if(a.classList.contains('addClass')){
+
+        price = priceCtrl.nullOvenCleaning();
+
+        }else{    
+
+        price = priceCtrl.getOvenCleaning();   
+
+        }
+
+        UIctrl.addOvenCleaning(price);
+        
+    }
+
     const refrigeratorCleaning = function(){
 
-        var a = document.querySelector(UIselectors.additionalservices).children[0];
+        var a = document.querySelector(UIselectors.additionalservices).children[5];
 
         var price = null;
 
@@ -273,7 +375,7 @@
     
     const closetCleaning = function(){
 
-        var a = document.querySelector(UIselectors.additionalservices).children[1];
+        var a = document.querySelector(UIselectors.additionalservices).children[6];
 
         var price = null;
 
@@ -288,106 +390,6 @@
         }
 
         UIctrl.addClosetCleaning(price);
-        
-    }
-
-    const interiorGlassCleaning = function(){
-        
-        var a = document.querySelector(UIselectors.additionalservices).children[2];
-
-        var price = null;
-
-        if(a.classList.contains('addClass')){
-
-        price = priceCtrl.nullInteriorGlass();
-
-        }else{ 
-
-        price = priceCtrl.getInteriorGlass();   
-
-        }
-
-        UIctrl.addInteriorGlass(price);
-        
-    }
-
-    const ovenCleaning = function(){
-
-        var a = document.querySelector(UIselectors.additionalservices).children[3];
-
-        var price = null;
-
-        if(a.classList.contains('addClass')){
-
-        price = priceCtrl.nullOvenCleaning();
-
-        }else{    
-
-        price = priceCtrl.getOvenCleaning();   
-
-        }
-
-        UIctrl.addOvenCleaning(price);
-        
-    }
-
-    const irons15 = function(){
-
-        var a = document.querySelector(UIselectors.additionalservices).children[4];
-
-        var price = null;
-
-        if(a.classList.contains('addClass')){
-
-        price = priceCtrl.nullIrons15();
-
-        }else{    
-
-        price = priceCtrl.getIrons15(); 
-
-        }
-
-        UIctrl.addIrons15(price);
-        
-    }
-
-    const irons30 = function(){
-
-        var a = document.querySelector(UIselectors.additionalservices).children[5];
-
-        var price = null;
-
-        if(a.classList.contains('addClass')){
-
-        price = priceCtrl.nullIrons30();
-
-        }else{    
-
-        price = priceCtrl.getIrons30(); 
-
-        }
-
-        UIctrl.addIrons30(price);
-        
-    }
-
-    const terraceCleaning = function(){
-
-        var a = document.querySelector(UIselectors.additionalservices).children[6];
-
-        var price = null;
-
-        if(a.classList.contains('addClass')){
-
-        price = priceCtrl.nullTerraceCleaning();
-
-        }else{    
-
-        price = priceCtrl.getTerraceCleaning();
-
-        }
-
-        UIctrl.addTerraceCleaning(price);
         
     }
 

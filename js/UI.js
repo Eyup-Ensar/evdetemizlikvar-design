@@ -377,9 +377,129 @@ const UIcontroller = (function(){
             }
         },
         // Ek hizmetler kısmında butonlara tıklandığında tr oluşturup o butona ait bilgileri yazdır.
+        // iç cam temizliği
+        addInteriorGlass: function(price){
+            const btn = document.querySelector(select.additionalservices).children[0];
+            const tbody = document.querySelector(select.print).children[1];
+            const lastTR = tbody.children[2];
+            const removeTR = document.querySelector('.removeInteriorGlass');
+            const tr = document.createElement("tr");
+            tr.classList.add('removeInteriorGlass');
+            const td1 = document.createElement("td");
+            const td2 = document.createElement("td");
+            const text1 = document.createTextNode(`İç Cam Temizliği`);
+            const text2 = document.createTextNode(`${price} TL`);
+            td1.appendChild(text1);
+            td2.appendChild(text2);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            if(!btn.classList.contains('addClass')){
+                btn.classList.add('addClass');
+                tbody.insertBefore(tr,lastTR);
+            }else{ 
+                btn.classList.remove('addClass');   
+                tbody.removeChild(removeTR); 
+            }
+        },
+        // 30 parça ütü
+        addIrons30: function(price){
+            const btn = document.querySelector(select.additionalservices).children[1];
+            const tbody = document.querySelector(select.print).children[1];
+            const lastTR = tbody.children[2];
+            const removeTR = document.querySelector('.removeIrons30');
+            const tr = document.createElement("tr");
+            tr.classList.add('removeIrons30');
+            const td1 = document.createElement("td");
+            const td2 = document.createElement("td");
+            const text1 = document.createTextNode(`30 Parça Ütü`);
+            const text2 = document.createTextNode(`${price} TL`);
+            td1.appendChild(text1);
+            td2.appendChild(text2);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            if(!btn.classList.contains('addClass')){
+                btn.classList.add('addClass');
+                tbody.insertBefore(tr,lastTR);
+            }else{ 
+                btn.classList.remove('addClass');   
+                tbody.removeChild(removeTR); 
+            }
+        },
+        // 15 parça ütü
+        addIrons15: function(price){
+            const btn = document.querySelector(select.additionalservices).children[2];
+            const tbody = document.querySelector(select.print).children[1];
+            const lastTR = tbody.children[2];
+            const removeTR = document.querySelector('.removeIrons15');
+            const tr = document.createElement("tr");
+            tr.classList.add('removeIrons15');
+            const td1 = document.createElement("td");
+            const td2 = document.createElement("td");
+            const text1 = document.createTextNode(`15 Parça Ütü`);
+            const text2 = document.createTextNode(`${price} TL`);
+            td1.appendChild(text1);
+            td2.appendChild(text2);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            if(!btn.classList.contains('addClass')){
+                btn.classList.add('addClass');
+                tbody.insertBefore(tr,lastTR);
+            }else{ 
+                btn.classList.remove('addClass');   
+                tbody.removeChild(removeTR); 
+            }
+        },
+        // teras temizliği
+        addTerraceCleaning: function(price){
+            const btn = document.querySelector(select.additionalservices).children[3];
+            const tbody = document.querySelector(select.print).children[1];
+            const lastTR = tbody.children[2];
+            const removeTR = document.querySelector('.terraceCleaning');
+            const tr = document.createElement("tr");
+            tr.classList.add('terraceCleaning');
+            const td1 = document.createElement("td");
+            const td2 = document.createElement("td");
+            const text1 = document.createTextNode(`Teras Temizliği`);
+            const text2 = document.createTextNode(`${price} TL`);
+            td1.appendChild(text1);
+            td2.appendChild(text2);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            if(!btn.classList.contains('addClass')){
+                btn.classList.add('addClass');
+                tbody.insertBefore(tr,lastTR);
+            }else{ 
+                btn.classList.remove('addClass');   
+                tbody.removeChild(removeTR); 
+            }
+        },
+        // fırın temizliği
+        addOvenCleaning: function(price){
+            const btn = document.querySelector(select.additionalservices).children[4];
+            const tbody = document.querySelector(select.print).children[1];
+            const lastTR = tbody.children[2];
+            const removeTR = document.querySelector('.removeOven');
+            const tr = document.createElement("tr");
+            tr.classList.add('removeOven');
+            const td1 = document.createElement("td");
+            const td2 = document.createElement("td");
+            const text1 = document.createTextNode(`Fırın Temizliği`);
+            const text2 = document.createTextNode(`${price} TL`);
+            td1.appendChild(text1);
+            td2.appendChild(text2);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            if(!btn.classList.contains('addClass')){
+                btn.classList.add('addClass');
+                tbody.insertBefore(tr,lastTR);
+            }else{ 
+                btn.classList.remove('addClass');   
+                tbody.removeChild(removeTR); 
+            }
+        },
         // buzdolabı temizliği
         addRefrigeratorCleaning: function(price){
-            const btn = document.querySelector(select.additionalservices).children[0];
+            const btn = document.querySelector(select.additionalservices).children[5];
             const tbody = document.querySelector(select.print).children[1];
             const lastTR = tbody.children[2];
             const removeTR = document.querySelector('.removeRefrigerator');
@@ -406,7 +526,7 @@ const UIcontroller = (function(){
         },
         // dolap temizliği
         addClosetCleaning: function(price){
-            const btn = document.querySelector(select.additionalservices).children[1];
+            const btn = document.querySelector(select.additionalservices).children[6];
             const tbody = document.querySelector(select.print).children[1];
             const lastTR = tbody.children[2];
             const removeTR = document.querySelector('.removecloset');
@@ -415,126 +535,6 @@ const UIcontroller = (function(){
             const td1 = document.createElement("td");
             const td2 = document.createElement("td");
             const text1 = document.createTextNode(`Dolap Temizliği`);
-            const text2 = document.createTextNode(`${price} TL`);
-            td1.appendChild(text1);
-            td2.appendChild(text2);
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            if(!btn.classList.contains('addClass')){
-                btn.classList.add('addClass');
-                tbody.insertBefore(tr,lastTR);
-            }else{ 
-                btn.classList.remove('addClass');   
-                tbody.removeChild(removeTR); 
-            }
-        },
-        // iç cam temizliği
-        addInteriorGlass: function(price){
-            const btn = document.querySelector(select.additionalservices).children[2];
-            const tbody = document.querySelector(select.print).children[1];
-            const lastTR = tbody.children[2];
-            const removeTR = document.querySelector('.removeInteriorGlass');
-            const tr = document.createElement("tr");
-            tr.classList.add('removeInteriorGlass');
-            const td1 = document.createElement("td");
-            const td2 = document.createElement("td");
-            const text1 = document.createTextNode(`İç Cam Temizliği`);
-            const text2 = document.createTextNode(`${price} TL`);
-            td1.appendChild(text1);
-            td2.appendChild(text2);
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            if(!btn.classList.contains('addClass')){
-                btn.classList.add('addClass');
-                tbody.insertBefore(tr,lastTR);
-            }else{ 
-                btn.classList.remove('addClass');   
-                tbody.removeChild(removeTR); 
-            }
-        },
-        // fırın temizliği
-        addOvenCleaning: function(price){
-            const btn = document.querySelector(select.additionalservices).children[3];
-            const tbody = document.querySelector(select.print).children[1];
-            const lastTR = tbody.children[2];
-            const removeTR = document.querySelector('.removeOven');
-            const tr = document.createElement("tr");
-            tr.classList.add('removeOven');
-            const td1 = document.createElement("td");
-            const td2 = document.createElement("td");
-            const text1 = document.createTextNode(`Fırın Temizliği`);
-            const text2 = document.createTextNode(`${price} TL`);
-            td1.appendChild(text1);
-            td2.appendChild(text2);
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            if(!btn.classList.contains('addClass')){
-                btn.classList.add('addClass');
-                tbody.insertBefore(tr,lastTR);
-            }else{ 
-                btn.classList.remove('addClass');   
-                tbody.removeChild(removeTR); 
-            }
-        },
-        // 15 parça ütü
-        addIrons15: function(price){
-            const btn = document.querySelector(select.additionalservices).children[4];
-            const tbody = document.querySelector(select.print).children[1];
-            const lastTR = tbody.children[2];
-            const removeTR = document.querySelector('.removeIrons15');
-            const tr = document.createElement("tr");
-            tr.classList.add('removeIrons15');
-            const td1 = document.createElement("td");
-            const td2 = document.createElement("td");
-            const text1 = document.createTextNode(`15 Parça Ütü`);
-            const text2 = document.createTextNode(`${price} TL`);
-            td1.appendChild(text1);
-            td2.appendChild(text2);
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            if(!btn.classList.contains('addClass')){
-                btn.classList.add('addClass');
-                tbody.insertBefore(tr,lastTR);
-            }else{ 
-                btn.classList.remove('addClass');   
-                tbody.removeChild(removeTR); 
-            }
-        },
-        // 30 parça ütü
-        addIrons30: function(price){
-            const btn = document.querySelector(select.additionalservices).children[5];
-            const tbody = document.querySelector(select.print).children[1];
-            const lastTR = tbody.children[2];
-            const removeTR = document.querySelector('.removeIrons30');
-            const tr = document.createElement("tr");
-            tr.classList.add('removeIrons30');
-            const td1 = document.createElement("td");
-            const td2 = document.createElement("td");
-            const text1 = document.createTextNode(`30 Parça Ütü`);
-            const text2 = document.createTextNode(`${price} TL`);
-            td1.appendChild(text1);
-            td2.appendChild(text2);
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            if(!btn.classList.contains('addClass')){
-                btn.classList.add('addClass');
-                tbody.insertBefore(tr,lastTR);
-            }else{ 
-                btn.classList.remove('addClass');   
-                tbody.removeChild(removeTR); 
-            }
-        },
-        // teras temizliği
-        addTerraceCleaning: function(price){
-            const btn = document.querySelector(select.additionalservices).children[6];
-            const tbody = document.querySelector(select.print).children[1];
-            const lastTR = tbody.children[2];
-            const removeTR = document.querySelector('.terraceCleaning');
-            const tr = document.createElement("tr");
-            tr.classList.add('terraceCleaning');
-            const td1 = document.createElement("td");
-            const td2 = document.createElement("td");
-            const text1 = document.createTextNode(`Teras Temizliği`);
             const text2 = document.createTextNode(`${price} TL`);
             td1.appendChild(text1);
             td2.appendChild(text2);
